@@ -1,0 +1,36 @@
+#title, #result-list .row{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    background-color: #232323;
+    padding: 15px 5px;
+    .item{
+        cursor: pointer;
+        width: 20%;
+        &:nth-child(1), &:nth-child(3){
+            width: 10%;
+        }
+        &:nth-child(5){
+            width: 40%;
+        }
+        i{
+            margin-right: 5px;
+        }
+    }
+}
+#result-list .row{
+    word-wrap: break-word;
+    color: black;
+    background-color: white;
+    &:nth-child(2n){
+        background-color: lightgrey;
+    }
+    .item:nth-child(5){
+        display: flex;
+        flex-wrap: wrap;
+        .sub-item{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+}

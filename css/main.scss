@@ -1,0 +1,93 @@
+// -- RESET CSS
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.valid{
+    background-color: #ED1A52;
+}
+#wrapper{
+    margin: auto;
+    padding: 30px 0;
+    width: 900px;
+    overflow: hidden;
+    h1{
+        text-transform: uppercase;
+        margin: 30px 0 20px 0;
+        padding: 15px 0;
+    }
+    #panel{
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        img{
+            width: 100%;
+            position: absolute;
+            opacity: 0.8;
+        }
+        h1{
+            margin: 0 !important;
+            padding: 0 !important;
+            color: #fff;
+            width: 100%;
+            line-height: 200px;
+            text-align: center;
+            text-transform: uppercase;  
+            font-size: 3em;
+            background-color: transparent;
+            z-index: 999;
+            position: absolute;
+            top: 0px;
+        }
+    }
+    hr{
+        margin: 10px 0;
+        border: 1px solid #232323;
+    }
+    
+    #register{
+        width: 100%;
+        @import 'register/personal-info';
+        @import 'register/personal-courses';
+        input[type="submit"]{
+            cursor: pointer;
+            font-size: 1em;
+            margin: 30px auto;
+            display: block;
+            width: 70%;
+            padding: 10px;
+            outline: none;
+            color: #fff;
+            background-color: #232323;
+            border: 2px solid #232323;
+            &:focus, &:hover{
+                outline: none;
+                color: black;
+                background-color: #fff;
+                border: 2px solid #232323;
+            }
+        }
+    }
+
+    #result{
+        border: 1px solid #232323;
+        @import 'result/result';
+    }
+}
+@media screen and (max-width: 1023px){
+    #wrapper{
+        font-size: 1em !important;
+        width: 700px;
+    }
+}
+@media screen and (max-width: 767px){
+    #wrapper{
+        width: 450px;
+        font-size: 0.5em !important;
+    }
+}

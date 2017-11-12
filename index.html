@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>JS-DOM-1</title>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="panel">
+            <img id="panel-img" src=img/panel-03.jpg alt="panel-image">
+            <h1>course registration</h1>
+        </div>
+        <hr>
+        <!-- START #REGISTER -->
+        <form id="register" action="">
+            <h1>personal info</h1>
+            <div id="personal-info">    
+                <!-- START ROW CLASS -->
+                <div  class="row">
+                    <input id="id" class="text-3x" name="id" type="text" placeholder="ID">
+                    <i class="fa fa-id-card-o"></i>
+                    <span class="asterik">*</span>
+                    <div class="tooltip">ID code 'student</div></div>
+                <div class="row">                 
+                    <input id="fullname" class="text-3x" name="fullname" type="text" placeholder="Full name">
+                    <i class="fa fa-info"></i>
+                    <span class="asterik">*</span>
+                    <div class="tooltip">Full name 'student</div></div>
+                <div class="row">
+                    <input id="address" class="text-3x" name="address" type="text" placeholder="Address">
+                    <i class="fa fa-map-marker"></i>
+                    <span class="asterik">*</span>
+                    <div class="tooltip">Address 'student</div></div>
+                <div class="row">
+                    <input id="phone" class="text-3x" name="phone" type="text" placeholder="Phone">
+                    <i class="fa fa-mobile"></i>
+                    <span class="asterik">*</span>
+                    <div class="tooltip">Personal phone 'student</div></div>
+                <div class="row">
+                    <input name="sex" id="men" value="Men" type="radio" checked>
+                    <label class="sex" for="men">Men</label>
+                    <input name="sex" id="women" value="Women" type="radio">
+                    <label class="sex" for="women">Women</label>
+                    <div class="tooltip">Generation 'student</div></div>
+                <div class="row">
+                    <select name="" id="month"></select>
+                    <select name="" id="day"></select>
+                    <select name="" id="year"></select>
+                    <div class="tooltip">Date of birth and format follow (MM/DD/YYYY)</div></div>
+                <div class="row">
+                    <input id="mail" class="text-3x" name="mail" type="text" placeholder="Email">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="asterik">*</span>
+                    <div class="tooltip">Personal email 'student</div></div>
+                <!-- END ROW CLASS -->
+            </div>
+            <br>
+            <h1>personal courses</h1>
+            <div id="personal-courses">
+                <div class="row">
+                    <div class="item">all courses</div>
+                    <div class="item">your courses selected</div>
+                </div>
+                <div class="row">
+                    <div id="leftCourses" class="item">
+                        <div onclick="changeBgWhenSelected(this)" id="course-0" class="course">Object Oriented Programming</div>
+                        <div onclick="changeBgWhenSelected(this)" id="course-1" class="course">Mathematical foundation of Computer Science</div>
+                        <div onclick="changeBgWhenSelected(this)" id="course-2" class="course">Applied Mathematics</div>
+                        <div onclick="changeBgWhenSelected(this)" id="course-3" class="course">ICT Tools and Security</div>
+                        <div onclick="changeBgWhenSelected(this)" id="course-4" class="course">Software Testing</div>
+                        <div onclick="changeBgWhenSelected(this)" id="course-5" class="course">Machine Learning</div>
+                        <div onclick="changeBgWhenSelected(this)" id="course-6" class="course">Artificial Intelligence</div>
+                    </div>
+                    <div class="item">  
+                        <div onclick="sendCourse(0, 'single')">></div>
+                        <div onclick="sendCourse(0, 'multi')">>></div>
+                        <div onclick="sendCourse(1, 'single')"><</div>
+                        <div onclick="sendCourse(1, 'multi')"><<</div>
+                    </div>
+                    <div id="rightCourses" class="item"></div>
+                </div>
+            </div>
+            <input type="submit" name="sm-register" value="REGISTER">
+        </form>
+        <!-- END #REGISTER -->
+        <hr>
+        <!-- ------------- -->
+        <!-- START #RESULT -->
+        <h1>RESULT</h1>
+        <div id="result">
+            <div id="title">
+                <div id="s-id" class="item des"><i class="fa fa-sort"></i>ID</div>
+                <div id="s-name" class="item des"><i class="fa fa-sort"></i>FULL NAME</div>
+                <div id="s-sex" class="item des"><i class="fa fa-sort"></i>GEN</div>
+                <div id="s-dob" class="item des"><i class="fa fa-sort"></i>DOB</div>
+                <div id="s-courses" class="item des">COURSES</div>
+            </div>
+            <div id="result-list"></div>
+        </div>
+        <!-- END #RESULT -->
+
+    </div>
+    <script src="js/main.js"></script>
+    <!-- <script src="js/form.js"></script> -->
+</body>
+</html>
